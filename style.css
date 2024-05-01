@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Inconsolata;
+}
+
+body {
+	background-color: #edefee;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	margin-left: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+header > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10vw;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+nav li {
+	display: inline-block;
+}
+
+section {
+	display: flex;
+}
+
+article {
+	flex: 1;
+}
+
+footer {
+	display: flex;
+}
+
+footer img {
+	width: 40vw;
+}
