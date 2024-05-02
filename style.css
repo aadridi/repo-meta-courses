@@ -12,14 +12,22 @@ body {
 	margin-left: 5%;
 }
 
+strong {
+	color: #e4aa9c;
+}
+
 h1 {
 	font-size: 3rem;
-	color: #d2624c;
+	color: white;
 	margin-bottom: 1.5rem;
+	padding: 0rem 0rem 1rem 1rem;
 }
 
 h1 + p {
 	font-size: 1.5rem;
+	color: white;
+	padding: 1rem;
+	text-overflow: ellipsis;
 }
 
 h2 {
@@ -65,10 +73,21 @@ section {
 	margin-right: auto;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+	gap: 2rem;
 }
 
 article {
 	flex: 1;
+}
+
+article > img {
+	width: 10vw;
+	float: right;
+	margin-left: 1rem;
+	margin-top: -3rem;
+	margin-bottom: 1rem;
+	border-radius: 10px;
+	border: #d2624c solid 2px;
 }
 
 footer {
@@ -90,10 +109,48 @@ footer div {
 
 footer div p {
 	font-size: 3rem;
+	text-align: right;
+	margin-right: 5%;
 }
 
 fieldset {
 	border: none;
 	border-top: #d2624c 2px solid;
 	margin-right: 5rem;
+}
+
+.main_section {
+	animation-duration: 3s;
+	animation-name: fadein;
+	background-image: url('img/hairdresses-worries-about-hair-salon-costs.jpeg');
+	background-position-y: 25%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-color: #da8272;
+	height: 30vh;
+}
+
+.second_section {
+	animation-duration: 3s;
+	animation-name: fadein;
+}
+
+.footer_section {
+	animation-duration: 3s;
+	animation-name: fadein;
+}
+
+.nav_elements {
+	animation-duration: 1s;
+	animation-name: fadein;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
