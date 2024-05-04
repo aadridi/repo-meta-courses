@@ -67,6 +67,12 @@ nav a:hover {
 	color: black;
 }
 
+nav li:active {
+	color: #d2624c;
+	background-color: white;
+	border: #d2624c 2px solid;
+}
+
 section {
 	display: flex;
 	margin-left: auto;
@@ -100,7 +106,7 @@ footer {
 }
 
 footer img {
-	width: 40vw;
+	width: 30vw;
 }
 
 footer div {
@@ -108,14 +114,15 @@ footer div {
 }
 
 footer div p {
-	font-size: 3rem;
+	font-size: 1rem;
 	text-align: right;
 	margin-right: 5%;
+	border-top: #d2624c solid 2px;
+	padding-top: 1rem;
 }
 
 fieldset {
 	border: none;
-	border-top: #d2624c 2px solid;
 	margin-right: 5rem;
 }
 
@@ -129,15 +136,16 @@ fieldset {
 	background-blend-mode: multiply;
 	background-color: #da8272;
 	height: 30vh;
+	border-radius: 25px;
 }
 
 .second_section {
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-name: fadein;
 }
 
 .footer_section {
-	animation-duration: 3s;
+	animation-duration: 5s;
 	animation-name: fadein;
 }
 
