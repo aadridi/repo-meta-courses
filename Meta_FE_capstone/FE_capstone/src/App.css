@@ -1,6 +1,204 @@
+li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*.
+.nav-container {
+	display: grid;
+	grid-template-columns: 2fr 2fr 8fr;
+	margin-left: 70px;
+	margin-right: 70px;
+	place-content: center;
+	/*background-color: blue;
+}
+
+
+.main-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-color: #495e57;
+	place-items: center;
+}
+	*/
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr 5fr 4fr 4fr 3fr;
+	gap: 20px 0px;
+	grid-auto-flow: row;
+	place-items: center;
+	place-content: center;
+	margin-right: 70px;
+	margin-left: 70px;
+}
+
+.nav-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 4fr;
+	grid-template-rows: 1fr;
+	gap: 20px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 'Blank Logo Nav-Links';
+	grid-area: 1 / 1 / 2 / 2;
+	padding: 20px;
+}
+
+.nav-blank {
+	grid-area: Blank;
+}
+
 .logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
+	height: 54px;
+	grid-area: Logo;
+}
+
+.nav-items-container {
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+	align-items: center;
+	column-gap: 20px;
+	font-family: 'Karla ExtraBold';
+	padding-right: 20px;
+	grid-area: Nav-Links;
+}
+
+.nav-items-container a {
+	color: black;
+	text-decoration: none;
+}
+
+.main-container {
+	display: grid;
+	grid-template-columns: 2fr 4fr 4fr 2fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20px;
+	grid-auto-flow: row;
+	grid-template-areas: 'first-main-blank Content Hero-Picture second-main-blank';
+	grid-area: 2 / 1 / 3 / 2;
+	place-content: center;
+	place-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #495e57;
+}
+
+.first-main-blank {
+	grid-area: first-main-blank;
+}
+
+.second-main-blank {
+	grid-area: second-main-blank;
+}
+
+.main-content {
+	grid-area: Content;
+	font-family: 'Markazi Text';
+}
+
+.main-content p {
+	font-family: 'Karla Regular';
+}
+
+.main-picture {
+	grid-area: Hero-Picture;
+}
+
+.Highlights {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 3fr;
+	gap: 20px 20px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'. Title . Online-Menu .'
+		'. Card-1 Card-2 Card-3 .';
+	grid-area: 3 / 1 / 4 / 2;
+}
+
+.Title {
+	grid-area: Title;
+}
+
+.Online-Menu {
+	grid-area: Online-Menu;
+}
+
+.Card-1 {
+	grid-area: Card-1;
+}
+
+.Card-2 {
+	grid-area: Card-2;
+}
+
+.Card-3 {
+	grid-area: Card-3;
+}
+
+.Testimonials {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	gap: 20px 20px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'. . . . . .'
+		'. Rating-1 Rating-2 Rating-3 Rating-4 .'
+		'. . . . . .';
+	grid-area: 4 / 1 / 5 / 2;
+}
+
+.Rating-1 {
+	grid-area: Rating-1;
+}
+
+.Rating-2 {
+	grid-area: Rating-2;
+}
+
+.Rating-3 {
+	grid-area: Rating-3;
+}
+
+.Rating-4 {
+	grid-area: Rating-4;
+}
+
+.About {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20px;
+	grid-auto-flow: row;
+	grid-template-areas: '. About-Text About-Pictures .';
+	grid-area: 5 / 1 / 6 / 2;
+}
+
+.About-Text {
+	grid-area: About-Text;
+}
+
+.About-Pictures {
+	grid-area: About-Pictures;
+}
+
+.Footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20px;
+	grid-auto-flow: row;
+	grid-template-areas: '. Picture Footer-Text .';
+	grid-area: 6 / 1 / 7 / 2;
+}
+
+.Picture {
+	grid-area: Picture;
+}
+
+.Footer-Text {
+	grid-area: Footer-Text;
 }
