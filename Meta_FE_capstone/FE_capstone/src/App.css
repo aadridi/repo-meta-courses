@@ -4,25 +4,6 @@ li {
 	margin: 0;
 }
 
-/*.
-.nav-container {
-	display: grid;
-	grid-template-columns: 2fr 2fr 8fr;
-	margin-left: 70px;
-	margin-right: 70px;
-	place-content: center;
-	/*background-color: blue;
-}
-
-
-.main-container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	background-color: #495e57;
-	place-items: center;
-}
-	*/
-
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -37,12 +18,11 @@ li {
 
 .nav-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 4fr;
+	grid-template-columns: 1fr 1fr 3fr 1fr;
 	grid-template-rows: 1fr;
-	gap: 20px 0px;
+	gap: 0px 0px;
 	grid-auto-flow: row;
-	grid-template-areas: 'Blank Logo Nav-Links';
-	grid-area: 1 / 1 / 2 / 2;
+	grid-template-areas: 'Blank Logo Nav-Links second-nav-blank';
 	padding: 20px;
 }
 
@@ -55,12 +35,21 @@ li {
 	grid-area: Logo;
 }
 
+.food-image {
+	height: 450px;
+	border-radius: 16px;
+	margin-top: 20px;
+	margin-bottom: -120px;
+	grid-area: Logo;
+}
+
 .nav-items-container {
 	display: grid;
 	grid-template-columns: repeat(6, auto);
 	align-items: center;
 	column-gap: 20px;
 	font-family: 'Karla ExtraBold';
+	font-size: 20px;
 	padding-right: 20px;
 	grid-area: Nav-Links;
 }
@@ -68,6 +57,10 @@ li {
 .nav-items-container a {
 	color: black;
 	text-decoration: none;
+}
+
+.second-nav-blank {
+	grid-area: second-nav-blank;
 }
 
 .main-container {
@@ -80,9 +73,8 @@ li {
 	grid-area: 2 / 1 / 3 / 2;
 	place-content: center;
 	place-items: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
 	background-color: #495e57;
+	padding-bottom: 20px;
 }
 
 .first-main-blank {
@@ -95,47 +87,146 @@ li {
 
 .main-content {
 	grid-area: Content;
+}
+
+.main-content h1 {
 	font-family: 'Markazi Text';
+	font-size: 64px;
+	color: #f4ce14;
+	/*background-color: aliceblue;*/
+}
+
+.main-content h2 {
+	font-family: 'Markazi Text';
+	font-size: 32px;
+	/*background-color: aliceblue;*/
+	margin-top: -60px;
+	color: white;
 }
 
 .main-content p {
-	font-family: 'Karla Regular';
+	font-family: 'Karla Medium';
+	font-size: 18px;
+	color: white;
+	width: 50%;
+	margin-bottom: 40px;
+	/*background-color: aliceblue;*/
+}
+
+.main-content button {
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	background-color: #f4ce14;
+	width: 205px;
+	height: 60px;
+	border-radius: 16px;
+	border: 1px solid black;
+	/*background-color: aliceblue;*/
 }
 
 .main-picture {
+	margin-top: 10px;
+	padding-bottom: 60px;
+	border-radius: 16px;
 	grid-area: Hero-Picture;
 }
 
-.Highlights {
+.highlights-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 3fr;
-	gap: 20px 20px;
-	grid-auto-flow: row;
 	grid-template-areas:
-		'. Title . Online-Menu .'
-		'. Card-1 Card-2 Card-3 .';
-	grid-area: 3 / 1 / 4 / 2;
+		'highlights-title'
+		'highlights-cards';
+	grid-area: highlights-container;
 }
 
-.Title {
-	grid-area: Title;
+.highlights-title {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20px;
+	grid-template-areas: 'first-highlights-blank highlights-title-title highlights-title-button-container second-highlights-blank';
+	grid-area: highlights-title;
 }
 
-.Online-Menu {
-	grid-area: Online-Menu;
+.first-highlights-blank {
+	grid-area: first-highlights-blank;
 }
 
-.Card-1 {
-	grid-area: Card-1;
+.second-highlights-blank {
+	grid-area: second-highlights-blank;
 }
 
-.Card-2 {
-	grid-area: Card-2;
+.highlights-title-title {
+	font-family: 'Markazi Text';
+	font-size: 64px;
+	grid-area: highlights-title-title;
 }
 
-.Card-3 {
-	grid-area: Card-3;
+.highlights-title-button-container {
+	place-self: center;
+	justify-self: right;
+	grid-area: highlights-title-button-container;
+}
+
+.highlights-title-button {
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	background-color: #f4ce14;
+	width: 205px;
+	height: 60px;
+	border-radius: 16px;
+	border: 1px solid black;
+}
+
+.highlights-cards {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20px;
+	grid-template-areas: 'first-blank-card group-cards second-blank-card';
+	grid-area: highlights-cards;
+}
+
+.first-blank-card {
+	grid-area: first-blank-card;
+}
+
+.second-blank-card {
+	grid-area: second-blank-card;
+}
+
+.group-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 'first-card second-card third-card';
+	gap: 0px 20px;
+	grid-area: group-cards;
+}
+
+.first-card {
+	grid-area: first-card;
+	border-top: 2px solid black;
+	border-top-right-radius: 16px;
+	border-top-left-radius: 16px;
+	background-color: gray;
+}
+
+.second-card {
+	grid-area: second-card;
+	border-top: 2px solid black;
+	border-top-right-radius: 16px;
+	border-top-left-radius: 16px;
+	background-color: gray;
+}
+
+.third-card {
+	grid-area: third-card;
+	border-top: 2px solid black;
+	border-top-right-radius: 16px;
+	border-top-left-radius: 16px;
+	background-color: gray;
 }
 
 .Testimonials {
