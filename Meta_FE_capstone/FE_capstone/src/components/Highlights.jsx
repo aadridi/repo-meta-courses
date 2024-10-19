@@ -15,9 +15,15 @@ function Highlights() {
 				<article className='highlights-cards'>
 					<div className='first-blank-card'></div>
 					<div className='group-cards'>
-						<div className='first-card'></div>
-						<div className='second-card'></div>
-						<div className='third-card'></div>
+						<div className='first-card'>
+							<h1 className='text-card'>Card Number n°1</h1>
+						</div>
+						<div className='second-card'>
+							<h1 className='text-card'>Card Number n°2</h1>
+						</div>
+						<div className='third-card'>
+							<h1 className='text-card'>Card Number n°3</h1>
+						</div>
 					</div>
 					<div className='second-blank-card'></div>
 				</article>

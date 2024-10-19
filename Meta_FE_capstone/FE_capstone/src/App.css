@@ -211,6 +211,7 @@ li {
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
 	background-color: gray;
+	place-content: center;
 }
 
 .second-card {
@@ -219,6 +220,7 @@ li {
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
 	background-color: gray;
+	place-content: center;
 }
 
 .third-card {
@@ -227,35 +229,81 @@ li {
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
 	background-color: gray;
+	place-content: center;
 }
 
-.Testimonials {
+.text-card {
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	place-self: center;
+	color: white;
+}
+
+.testimonials-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 4fr 1fr;
 	grid-template-rows: 1fr 2fr 1fr;
 	gap: 20px 20px;
-	grid-auto-flow: row;
 	grid-template-areas:
-		'. . . . . .'
-		'. Rating-1 Rating-2 Rating-3 Rating-4 .'
-		'. . . . . .';
-	grid-area: 4 / 1 / 5 / 2;
+		'. testimonials-title .'
+		'. ratings-container .'
+		'. . .';
+	grid-area: Testimonials;
+	margin-top: 135px;
 }
 
-.Rating-1 {
-	grid-area: Rating-1;
+.testimonials-title {
+	grid-area: testimonials-title;
+	place-self: center;
+	font-family: 'Markazi Text';
+	font-size: 36px;
 }
-
-.Rating-2 {
-	grid-area: Rating-2;
+.ratings-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20px;
+	grid-template-areas: '. ratings-1 ratings-2 ratings-3 ratings-4 .';
+	grid-area: ratings-container;
 }
-
-.Rating-3 {
-	grid-area: Rating-3;
+.ratings-1 {
+	grid-area: ratings-1;
+	background-color: gray;
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	align-content: center;
+	text-align: center;
+	color: white;
+	height: 175px;
 }
-
-.Rating-4 {
-	grid-area: Rating-4;
+.ratings-2 {
+	grid-area: ratings-2;
+	background-color: gray;
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	align-content: center;
+	text-align: center;
+	color: white;
+	height: 175px;
+}
+.ratings-3 {
+	grid-area: ratings-3;
+	background-color: gray;
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	align-content: center;
+	text-align: center;
+	color: white;
+}
+.ratings-4 {
+	grid-area: ratings-4;
+	background-color: gray;
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	align-content: center;
+	text-align: center;
+	color: white;
+	height: 175px;
 }
 
 .About {
