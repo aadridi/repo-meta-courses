@@ -242,14 +242,16 @@ li {
 .testimonials-container {
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
-	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 1fr 2fr 1fr;
 	gap: 20px 20px;
 	grid-template-areas:
 		'. testimonials-title .'
-		'. ratings-container .'
+		'. testimonials-title .'
+		'ratings-container ratings-container ratings-container'
 		'. . .';
 	grid-area: Testimonials;
 	margin-top: 135px;
+	background-color: #d9d9d9;
 }
 
 .testimonials-title {
@@ -257,6 +259,7 @@ li {
 	place-self: center;
 	font-family: 'Markazi Text';
 	font-size: 36px;
+	padding-top: 100px;
 }
 .ratings-container {
 	display: grid;
@@ -294,6 +297,7 @@ li {
 	align-content: center;
 	text-align: center;
 	color: white;
+	height: 175px;
 }
 .ratings-4 {
 	grid-area: ratings-4;
@@ -306,38 +310,120 @@ li {
 	height: 175px;
 }
 
-.About {
+.about-container {
 	display: grid;
 	grid-template-columns: 1fr 2fr 2fr 1fr;
 	grid-template-rows: 1fr;
 	gap: 0px 20px;
 	grid-auto-flow: row;
-	grid-template-areas: '. About-Text About-Pictures .';
-	grid-area: 5 / 1 / 6 / 2;
+	grid-template-areas: '. about-content about-pictures .';
+	margin-top: 100px;
 }
 
-.About-Text {
-	grid-area: About-Text;
+.about-content h1 {
+	font-family: 'Markazi Text';
+	font-size: 64px;
 }
 
-.About-Pictures {
-	grid-area: About-Pictures;
+.about-content h2 {
+	font-family: 'Markazi Text';
+	font-size: 32px;
+	/*background-color: aliceblue;*/
+	margin-top: -60px;
+	margin-bottom: 60px;
 }
 
-.Footer {
+.about-content p {
+	font-family: 'Karla';
+	font-size: 20px;
+	width: 80%;
+	/*background-color: aliceblue;*/
+}
+
+.about-content {
+	grid-area: about-content;
+}
+
+.about-pictures {
+	grid-area: about-pictures;
+}
+
+.food-image-1 {
+	height: 550px;
+	border-radius: 16px;
+	margin-top: 20px;
+	margin-bottom: -250px;
+	float: right;
+	border: 1px solid black;
+}
+
+.food-image-2 {
+	height: 550px;
+	border-radius: 16px;
+	margin-top: -125px;
+	margin-bottom: -250px;
+	float: left;
+	border: 1px solid black;
+}
+
+.footer-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 3fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	gap: 0px 20px;
-	grid-auto-flow: row;
-	grid-template-areas: '. Picture Footer-Text .';
-	grid-area: 6 / 1 / 7 / 2;
+	gap: 0px 50px;
+	grid-template-areas: '. footer-picture footer-navigation footer-contact footer-socialmedialinks .';
+	background-color: #d9d9d9;
+	margin-top: 350px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	place-items: top;
 }
 
-.Picture {
-	grid-area: Picture;
+.footer-picture {
+	grid-area: footer-picture;
+	height: 350px;
+	border: 1px solid black;
+	place-self: center;
 }
 
-.Footer-Text {
-	grid-area: Footer-Text;
+.footer-navigation h2 {
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	color: #495e57;
+}
+
+.footer-navigation {
+	grid-area: footer-navigation;
+	font-family: 'Karla';
+	font-size: 20px;
+}
+
+.footer-contact {
+	grid-area: footer-contact;
+	font-family: 'Karla';
+	font-size: 20px;
+}
+
+.footer-contact h2 {
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	color: #495e57;
+}
+
+.footer-socialmedialinks {
+	grid-area: footer-socialmedialinks;
+	font-family: 'Karla';
+	font-size: 20px;
+	text-align: left;
+}
+
+.footer-socialmedialinks h2 {
+	font-family: 'Karla ExtraBold';
+	font-size: 20px;
+	color: #495e57;
+}
+
+.footer-container ul {
+	list-style-type: none;
+	padding-left: 0;
 }
