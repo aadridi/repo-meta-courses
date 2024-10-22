@@ -4,7 +4,6 @@ function Nav() {
 	return (
 		<>
 			<nav className='nav-container'>
-				<div className='nav-blank'></div>
 				<img src={le_logo} className='logo' alt='Little Lemon Logo' />
 				<ul className='nav-items-container'>
 					<li className='nav-links'>
@@ -38,7 +37,6 @@ function Nav() {
 						</a>
 					</li>
 				</ul>
-				<div className='second-nav-blank'></div>
 			</nav>
 		</>
 	);
