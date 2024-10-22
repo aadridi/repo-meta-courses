@@ -1,4 +1,5 @@
 import le_logo from '../assets/le_logo.svg';
+import { Link } from 'react-router-dom';
 
 function Nav() {
 	return (
@@ -7,34 +8,22 @@ function Nav() {
 				<img src={le_logo} className='logo' alt='Little Lemon Logo' />
 				<ul className='nav-items-container'>
 					<li className='nav-links'>
-						<a href='#' target='_blank'>
-							Home
-						</a>
+						<Link to='/homepage'>Home</Link>
 					</li>
 					<li className='nav-links'>
-						<a href='#' target='_blank'>
-							About
-						</a>
+						<Link to='/about'>About</Link>
 					</li>
 					<li className='nav-links'>
-						<a href='#' target='_blank'>
-							Menu
-						</a>
+						<Link to='/menu'>Menu</Link>
 					</li>
 					<li className='nav-links'>
-						<a href='#' target='_blank'>
-							Reservations
-						</a>
+						<Link to='/reservations'>Reservations</Link>
 					</li>
 					<li className='nav-links'>
-						<a href='#' target='_blank'>
-							Order Online
-						</a>
+						<Link to='/orderonline'>Order Online</Link>
 					</li>
 					<li className='nav-links'>
-						<a href='#' target='_blank'>
-							Login
-						</a>
+						<Link to='/login'>Login</Link>
 					</li>
 				</ul>
 			</nav>

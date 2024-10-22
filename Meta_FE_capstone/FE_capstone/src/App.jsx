@@ -1,24 +1,17 @@
-/*import { useState } from 'react';*/
 import './App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Highlights from './components/Highlights';
-import Footer from './components/Footer';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
+import Homepage from './layouts/homepage-layout';
+import OrderOnline from './layouts/orderonline-layout';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 	return (
-		<>
-			<Header />
-			<Nav />
-			<Main />
-			<Highlights />
-			<Testimonials />
-			<About />
-			<Footer />
-		</>
+		<Router>
+			<Routes>
+				<Route path='/homepage' element={<Homepage />} />
+				<Route path='/orderonline' element={<OrderOnline />} />
+			</Routes>
+		</Router>
 	);
 }
 
