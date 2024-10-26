@@ -169,11 +169,61 @@ li {
 
 .first-card {
 	grid-area: first-card;
-	border-top: 2px solid black;
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
 	background-color: gray;
 	place-content: center;
+	height: 550px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 1fr 2fr 1fr;
+	gap: 0px 20px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'card-image'
+		'card-title-title'
+		'card-description'
+		'card-footer';
+}
+
+.card-image {
+	grid-area: card-image;
+	border: 1px solid black;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.card-title-title {
+	grid-area: card-title-title;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'card-title' 'card-price';
+	align-items: center;
+	place-items: justify;
+	column-gap: 40px;
+	padding-left: 20px;
+	background-color: #495e57;
+}
+
+.card-title {
+	font-family: 'Karla';
+	font-size: 18pt;
+}
+
+.card-price {
+	font-family: 'Karla Medium';
+	font-size: 18pt;
+	text-align: center;
+}
+
+.card-description {
+	grid-area: card-description;
+	font-family: 'Karla Regular';
+	font-size: 16pt;
+}
+
+.card-footer {
+	grid-area: card-footer;
 }
 
 .second-card {
