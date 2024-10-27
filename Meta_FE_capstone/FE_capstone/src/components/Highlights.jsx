@@ -1,4 +1,5 @@
 /*import restauranfood from '../assets/restauranfood.jpg';*/
+import Card from './Card';
 
 function Highlights() {
 	return (
@@ -12,9 +13,7 @@ function Highlights() {
 				</article>
 				<article className='highlights-cards'>
 					<div className='group-cards'>
-						<div className='first-card'>
-							<h1 className='text-card'>Card Number n°1</h1>
-						</div>
+						<Card />
 						<div className='second-card'>
 							<h1 className='text-card'>Card Number n°2</h1>
 						</div>

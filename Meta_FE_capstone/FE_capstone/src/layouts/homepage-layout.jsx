@@ -5,7 +5,6 @@ import Highlights from '../components/Highlights';
 import Footer from '../components/Footer';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
-import Card from '../components/Card';
 
 function Homepage() {
 	return (
@@ -17,7 +16,6 @@ function Homepage() {
 			<Testimonials />
 			<About />
 			<Footer />
-			<Card />
 		</>
 	);
 }
