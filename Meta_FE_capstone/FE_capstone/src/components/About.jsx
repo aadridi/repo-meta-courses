@@ -3,7 +3,7 @@ import restauranfood from '../assets/restauranfood.jpg';
 function About() {
 	return (
 		<>
-			<section className='about-container'>
+			<section id='about-section' className='about-container'>
 				<div className='about-content'>
 					<h1>Little Lemon</h1>
 					<h2>Chicago</h2>

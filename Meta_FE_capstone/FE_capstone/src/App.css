@@ -4,6 +4,15 @@ li {
 	margin: 0;
 }
 
+.scroll-link {
+	cursor: pointer;
+}
+
+.delivery-icon {
+	height: 1.5em;
+	padding-left: 10px;
+}
+
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -14,6 +23,7 @@ li {
 	place-content: center;
 	margin-right: 70px;
 	margin-left: 70px;
+	height: 4000px;
 }
 
 .nav-container {
@@ -173,10 +183,11 @@ li {
 	border-top-left-radius: 16px;
 	align-content: center;
 	height: 500px;
+	width: 332px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 2fr 1fr 2fr 1fr;
-	gap: 0px 20px;
+	gap: 0px 0px;
 	grid-auto-flow: row;
 	grid-template-areas:
 		'card-image'
@@ -191,21 +202,20 @@ li {
 	border: 1px solid black;
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
-	width: 330px;
 	height: 185px;
+	width: 330px;
 }
 
 .card-title-title {
 	grid-area: card-title-title;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	grid-template-areas: 'card-title' 'card-price';
 	align-items: center;
 	justify-content: center;
-	column-gap: 40px;
+	column-gap: 0px;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 10px;
 }
 
 .card-title {
@@ -233,29 +243,52 @@ li {
 
 .card-footer {
 	grid-area: card-footer;
+	display: flex;
 	font-family: 'Karla Medium';
 	font-size: 16px;
 	padding-left: 20px;
-	padding-bottom: 10px;
-	align-self: center;
+	padding-bottom: 20px;
+	align-items: center;
 }
 
 .second-card {
 	grid-area: second-card;
-	border-top: 2px solid black;
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
-	background-color: gray;
-	place-content: center;
+	align-content: center;
+	height: 500px;
+	width: 332px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 1fr 2fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'card-image'
+		'card-title-title'
+		'card-description'
+		'card-footer';
+	background-color: #edefee;
 }
 
 .third-card {
 	grid-area: third-card;
-	border-top: 2px solid black;
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
-	background-color: gray;
-	place-content: center;
+	align-content: center;
+	height: 500px;
+	width: 332px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 1fr 2fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'card-image'
+		'card-title-title'
+		'card-description'
+		'card-footer';
+	background-color: #edefee;
 }
 
 .text-card {
@@ -370,7 +403,6 @@ li {
 
 .about-pictures {
 	grid-area: about-pictures;
-	background-color: gray;
 }
 
 .food-image-1 {

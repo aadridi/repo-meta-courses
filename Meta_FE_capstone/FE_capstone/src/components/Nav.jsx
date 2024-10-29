@@ -1,5 +1,6 @@
 import le_logo from '../assets/le_logo.svg';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 function Nav() {
 	return (
@@ -11,7 +12,9 @@ function Nav() {
 						<Link to='/homepage'>Home</Link>
 					</li>
 					<li className='nav-links'>
-						<Link to='/about'>About</Link>
+						<ScrollLink to='about-section' smooth={true} duration={500} className='scroll-link'>
+							About
+						</ScrollLink>
 					</li>
 					<li className='nav-links'>
 						<Link to='/menu'>Menu</Link>
