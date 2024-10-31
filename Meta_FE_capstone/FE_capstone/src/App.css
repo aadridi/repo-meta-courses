@@ -8,6 +8,13 @@ body {
 	min-height: 100vh;
 }
 
+legend {
+	font-size: 2em;
+	font-family: 'Karla ExtraBold';
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .scroll-link {
 	cursor: pointer;
 }
@@ -15,6 +22,12 @@ body {
 .delivery-icon {
 	height: 1.5em;
 	padding-left: 10px;
+}
+
+fieldset {
+	border: 4px dashed #495e57;
+	margin-top: 20px;
+	padding: 20px;
 }
 
 .container {
@@ -536,36 +549,50 @@ body {
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 20px 20px;
 	grid-template-areas:
-		'main-res-blank main-res-date main-res-time .'
+		'. main-res-date main-res-time .'
 		'. main-res-number-of-diners main-res-occasion .'
 		'. main-res-options-seating main-res-button .';
 	grid-area: main-res-options;
-	background-color: gray;
-
 	font-family: 'Karla Medium';
 }
 
-.main-res-blank {
-	background-color: orange;
-	grid-area: main-res-blank;
+.main-res-options select,
+.main-res-options input {
+	font-family: 'Karla Medium';
+	font-size: 1.25em;
+	text-align: right;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.main-res-options label {
+	font-size: 1.25em;
 }
 
 .main-res-date {
 	grid-area: main-res-date;
 	display: flex;
-	background-color: #f4ce14;
+	justify-content: space-between;
+	align-items: center;
 }
+
 .main-res-time {
 	grid-area: main-res-time;
-	background-color: #f4ce14;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .main-res-number-of-diners {
 	grid-area: main-res-number-of-diners;
-	background-color: #f4ce14;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .main-res-occasion {
 	grid-area: main-res-occasion;
-	background-color: #f4ce14;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .main-res-options-seating {
 	display: grid;
@@ -573,26 +600,38 @@ body {
 	grid-template-rows: 1fr 1fr;
 	gap: 0px 0px;
 	grid-template-areas:
-		'. main-res-options-1'
-		'. main-res-options-2';
+		'main-res-options-title main-res-options-1'
+		'main-res-options-title main-res-options-2';
 	grid-area: main-res-options-seating;
-	background-color: #f4ce14;
+	justify-content: end;
+	align-items: center;
+	column-gap: 20px;
 }
 
 .main-res-options-1 {
 	grid-area: main-res-options-1;
+	justify-self: end;
+}
+
+.main-res-options-title {
+	grid-area: main-res-options-title;
+	font-size: 1.25em;
 }
 
 .main-res-options-2 {
 	grid-area: main-res-options-2;
+	justify-self: end;
 }
 
 .main-res-button {
 	grid-area: main-res-button;
 	font-family: 'Karla ExtraBold';
-	font-size: 16px;
+	justify-self: center;
+	font-size: 1.25em;
+	padding-left: 20px;
+	padding-right: 20px;
 	background-color: #f4ce14;
-	width: 205px;
+	width: auto;
 	height: 60px;
 	border-radius: 16px;
 	border: 1px solid black;
