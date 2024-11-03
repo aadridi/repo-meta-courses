@@ -1,3 +1,4 @@
+import React from 'react';
 import { useFormik } from 'formik';
 
 const BookingForm = (props) => {
@@ -15,6 +16,11 @@ const BookingForm = (props) => {
 		},
 	});
 
+	const handleDateChange = (e) => {
+		formik.handleChange(e);
+		props.dispatch({ type: 'UPDATE', date: e.target.value });
+	};
+
 	const availableTimes = props.availableTimes;
 
 	const listOfAvailableTimes = availableTimes.map((item) => <option key={item}>{item}</option>);
@@ -25,7 +31,7 @@ const BookingForm = (props) => {
 			<form onSubmit={formik.handleSubmit} className='main-res-options'>
 				<div className='main-res-date'>
 					<label htmlFor='res-date'>Choose Date :</label>
-					<input type='date' id='res-date' name='resDate' onChange={formik.handleChange} value={formik.values.resDate} />
+					<input type='date' id='res-date' name='resDate' onChange={handleDateChange} value={formik.values.resDate} />
 				</div>
 				<div className='main-res-time'>
 					<label htmlFor='res-time'>Choose Time :</label>
