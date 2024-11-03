@@ -1,5 +1,5 @@
-import React from 'react';
 import { useFormik } from 'formik';
+import { submitAPI } from '../api';
 
 const BookingForm = (props) => {
 	const formik = useFormik({
@@ -12,6 +12,7 @@ const BookingForm = (props) => {
 		},
 		onSubmit: (values) => {
 			console.log('Form submitted !');
+			console.log(submitAPI(values));
 			console.log(values);
 		},
 	});
