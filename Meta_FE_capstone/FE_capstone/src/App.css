@@ -593,6 +593,8 @@ fieldset img {
 
 .main-res-options label {
 	font-size: 1.25em;
+	font-weight: 700;
+	font-weight: bold;
 }
 
 .main-res-date {
@@ -642,6 +644,8 @@ fieldset img {
 .main-res-options-title {
 	grid-area: main-res-options-title;
 	font-size: 1.25em;
+	font-weight: 700;
+	font-style: bold;
 }
 
 .main-res-options-2 {
@@ -652,6 +656,8 @@ fieldset img {
 .main-res-button {
 	grid-area: main-res-button;
 	font-family: 'Karla';
+	font-weight: 700;
+	font-style: bold;
 	justify-self: center;
 	font-size: 1.25em;
 	padding-left: 20px;
