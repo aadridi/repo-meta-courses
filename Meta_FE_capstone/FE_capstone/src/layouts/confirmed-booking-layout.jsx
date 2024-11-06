@@ -2,18 +2,18 @@ import Header from '../components/Header';
 import Nav from '../components/Nav';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
-import About from '../components/About';
+import ConfirmedBooking from '../components/ConfirmedBooking';
 
-function OrderOnline() {
+function ConfirmedBookingLayout() {
 	return (
 		<>
 			<Header />
 			<Nav />
 			<Main />
-			<About />
+			<ConfirmedBooking />
 			<Footer />
 		</>
 	);
 }
 
-export default OrderOnline;
+export default ConfirmedBookingLayout;

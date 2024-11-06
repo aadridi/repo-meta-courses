@@ -35,7 +35,7 @@ const MainReservations = () => {
 
 export default MainReservations;
 
-/* /* 			<div className='main-signin'>
+/* 			<div className='main-signin'>
 				<div className='main-signin-title'>
 					<div className='main-signin-title-title'>Sign In to collect points</div>
 				</div>

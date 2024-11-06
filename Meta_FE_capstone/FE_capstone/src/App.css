@@ -10,7 +10,9 @@ body {
 
 legend {
 	font-size: 2em;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
+	font-weight: 900;
+	font-style: bold;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -26,8 +28,24 @@ legend {
 
 fieldset {
 	border: 4px dashed #495e57;
-	margin-top: 20px;
+	margin-top: 80px;
 	padding: 20px;
+}
+
+fieldset p {
+	font-size: 1.5em;
+	font-family: 'Karla';
+	font-weight: 700;
+	font-style: bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+fieldset img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .container {
@@ -70,7 +88,9 @@ fieldset {
 	grid-template-columns: repeat(6, auto);
 	align-items: center;
 	column-gap: 20px;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
+	font-weight: 900;
+	font-style: bold;
 	font-size: 20px;
 	padding-right: 20px;
 	grid-area: Nav-Links;
@@ -113,7 +133,7 @@ fieldset {
 }
 
 .main-content p {
-	font-family: 'Karla Medium';
+	font-family: 'Karla';
 	font-size: 18px;
 	color: white;
 	width: 50%;
@@ -121,7 +141,9 @@ fieldset {
 }
 
 .main-content button {
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
+	font-weight: 900;
+	font-style: bold;
 	font-size: 20px;
 	background-color: #f4ce14;
 	width: 205px;
@@ -169,7 +191,9 @@ fieldset {
 }
 
 .highlights-title-button {
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
+	font-weight: 900;
+	font-style: bold;
 	font-size: 20px;
 	background-color: #f4ce14;
 	width: 205px;
@@ -242,7 +266,9 @@ fieldset {
 }
 
 .card-price {
-	font-family: 'Karla Medium';
+	font-family: 'Karla';
+	font-weight: 700;
+	font-style: bold;
 	font-size: 18pt;
 	text-align: center;
 	justify-self: end;
@@ -251,7 +277,7 @@ fieldset {
 
 .card-description {
 	grid-area: card-description;
-	font-family: 'Karla Regular';
+	font-family: 'Karla';
 	font-size: 16px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -262,7 +288,7 @@ fieldset {
 .card-footer {
 	grid-area: card-footer;
 	display: flex;
-	font-family: 'Karla Medium';
+	font-family: 'Karla';
 	font-size: 16px;
 	padding-left: 20px;
 	padding-bottom: 20px;
@@ -310,7 +336,7 @@ fieldset {
 }
 
 .text-card {
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	place-self: center;
 	color: white;
@@ -349,7 +375,7 @@ fieldset {
 .ratings-1 {
 	grid-area: ratings-1;
 	background-color: gray;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	align-content: center;
 	text-align: center;
@@ -359,7 +385,7 @@ fieldset {
 .ratings-2 {
 	grid-area: ratings-2;
 	background-color: gray;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	align-content: center;
 	text-align: center;
@@ -369,7 +395,7 @@ fieldset {
 .ratings-3 {
 	grid-area: ratings-3;
 	background-color: gray;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	align-content: center;
 	text-align: center;
@@ -379,7 +405,7 @@ fieldset {
 .ratings-4 {
 	grid-area: ratings-4;
 	background-color: gray;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	align-content: center;
 	text-align: center;
@@ -462,7 +488,7 @@ fieldset {
 }
 
 .footer-navigation h2 {
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	color: #495e57;
 }
@@ -480,7 +506,7 @@ fieldset {
 }
 
 .footer-contact h2 {
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	color: #495e57;
 }
@@ -493,7 +519,7 @@ fieldset {
 }
 
 .footer-socialmedialinks h2 {
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	font-size: 20px;
 	color: #495e57;
 }
@@ -553,12 +579,12 @@ fieldset {
 		'. main-res-number-of-diners main-res-occasion .'
 		'. main-res-options-seating main-res-button .';
 	grid-area: main-res-options;
-	font-family: 'Karla Medium';
+	font-family: 'Karla';
 }
 
 .main-res-options select,
 .main-res-options input {
-	font-family: 'Karla Medium';
+	font-family: 'Karla';
 	font-size: 1.25em;
 	text-align: right;
 	padding-right: 10px;
@@ -625,7 +651,7 @@ fieldset {
 
 .main-res-button {
 	grid-area: main-res-button;
-	font-family: 'Karla ExtraBold';
+	font-family: 'Karla';
 	justify-self: center;
 	font-size: 1.25em;
 	padding-left: 20px;
@@ -692,3 +718,7 @@ fieldset {
 	grid-template-areas: '.';
 	grid-area: main-signin-button;
 }
+
+/*.confirmed-booking-container {
+
+}*/

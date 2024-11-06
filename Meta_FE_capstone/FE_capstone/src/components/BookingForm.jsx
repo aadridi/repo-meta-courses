@@ -1,7 +1,10 @@
 import { useFormik } from 'formik';
 import { submitAPI } from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const BookingForm = (props) => {
+	const navigate = useNavigate();
+
 	const formik = useFormik({
 		initialValues: {
 			resDate: '',
@@ -12,8 +15,8 @@ const BookingForm = (props) => {
 		},
 		onSubmit: (values) => {
 			console.log('Form submitted !');
-			console.log(submitAPI(values));
 			console.log(values);
+			submitAPI(values) === true ? navigate('/confirmed-booking') : console.log('There has been an error with processing your reservation.');
 		},
 	});
 

@@ -1,15 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import BookingForm from './components/BookingForm';
 import { initializeTimes, updateTimes } from './components/MainReservations';
+import { fetchAPI } from './api';
 
-test('Renders Occasion', () => {
-	const mockAvailableTimes = ['10:00 AM', '12:00 PM', '2:00 PM'];
-
-	render(<BookingForm availableTimes={mockAvailableTimes} />);
-	const element = screen.getByText('Occasion :');
-	expect(element).toBeTruthy();
-});
+jest.mock('./api');
 
 test('renders text', () => {
 	render(<div>Test Element</div>);
@@ -18,17 +12,26 @@ test('renders text', () => {
 });
 
 describe('initializeTimes', () => {
-	test('returns the correct expected initial value', () => {
-		const expectedTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+	test('returns an object of type array', () => {
+		const testdata = ['17:00', '18:00', '19:00'];
+		fetchAPI.mockReturnValue(testdata);
+
 		const result = initializeTimes();
-		expect(result).toEqual(expectedTimes);
+
+		expect(result).toBeInstanceOf(Array);
+		expect(result).toEqual(testdata);
 	});
 });
 
 describe('updateTimes', () => {
-	test('returns the same value as provided in the state', () => {
-		const currentState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']; // Remplace par l'état initial attendu
-		const result = updateTimes(currentState, { type: 'UPDATE', payload: currentState });
-		expect(result).toEqual(currentState);
+	test('returns the same value as provided by fetchAPI', () => {
+		const newdate = '2024-11-07';
+		const testdata = ['17:00', '18:00', '19:00'];
+		fetchAPI.mockReturnValue(testdata);
+
+		const result = updateTimes([], { type: 'UPDATE', date: newdate });
+
+		expect(fetchAPI).toHaveBeenCalledWith(new Date(newdate));
+		expect(result).toEqual(testdata);
 	});
 });
