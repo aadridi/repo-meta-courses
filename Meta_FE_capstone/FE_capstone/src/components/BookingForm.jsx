@@ -47,7 +47,7 @@ const BookingForm = (props) => {
 			<form onSubmit={formik.handleSubmit} className='main-res-options'>
 				<div className='main-res-date'>
 					<label htmlFor='res-date'>Choose Date:</label>
-					<input type='date' id='res-date' name='resDate' min={today} onChange={handleDateChange} value={formik.values.resDate} {...formik.getFieldProps('resDate')} aria-label='Select date options' />
+					<input type='date' id='res-date' name='resDate' min={today} onChange={handleDateChange} value={formik.values.resDate} aria-label='Select date options' />
 					{formik.touched.resDate && formik.errors.resDate ? <div>{formik.errors.resDate}</div> : null}
 				</div>
 				<div className='main-res-time'>
