@@ -12,19 +12,21 @@ function Highlights() {
 
 	return (
 		<>
-			<div className='highlights-container'>
-				<article className='highlights-title'>
-					<h1 className='highlights-title-title'>This weeks specials! </h1>
-					<div className='highlights-title-button-container'>
-						<button className='highlights-title-button'>Online Menu</button>
-					</div>
+			<div className='md:flex md:flex-col md:justify-start'>
+				<article
+					className='flex flex-col justify-center items-center p-4 gap-2 text-center
+				md:justify-start md:flex-row md:p-16 md:flex-wrap md:gap-12'
+				>
+					<h1 className='font-karla text-black text-4xl'>This weeks specials! </h1>
+					<button className='bg-primary_yellow font-markazi p-4 font-bold cursor-pointer rounded-2xl'>Online Menu</button>
 				</article>
-				<article className='highlights-cards'>
-					<div className='group-cards'>
-						{cards_info.map((card) => (
-							<Card key={card.id} card={card} />
-						))}
-					</div>
+				<article
+					className='flex flex-col justify-center items-center p-4 gap-4
+				md:justify-center md:flex-row md:flex-wrap md:gap-8 md:items-start md:p-0 md:mx-auto'
+				>
+					{cards_info.map((card) => (
+						<Card key={card.id} card={card} />
+					))}
 				</article>
 			</div>
 		</>

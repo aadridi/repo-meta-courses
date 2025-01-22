@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import Homepage from './layouts/homepage-layout';
 import ConfirmedBookingLayout from './layouts/confirmed-booking-layout';
 import Reservations from './layouts/reservations-layout';

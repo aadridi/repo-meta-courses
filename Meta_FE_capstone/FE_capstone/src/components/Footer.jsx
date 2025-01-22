@@ -3,7 +3,7 @@ import restauranfood from '../assets/restauranfood.jpg';
 function Footer() {
 	return (
 		<>
-			<section className='footer-container'>
+			<section className='hidden'>
 				<img src={restauranfood} className='footer-picture' alt='Food Image' />
 				<div className='footer-navigation'>
 					<h2>Doormat Navigation</h2>
