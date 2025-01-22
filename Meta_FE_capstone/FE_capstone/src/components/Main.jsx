@@ -17,7 +17,7 @@ function Main() {
 					<button className='scroll-link bg-primary_yellow font-markazi p-4 font-bold cursor-pointer rounded-2xl md:mt-4'>Reserve a Table</button>
 				</Link>
 				<img className='w-3/5 my-3 rounded-2xl
-				md:w-1/5 md:max-h-[85%%] md:max-w-[300px] md:absolute md:top-[20px] md:right-20' src={restauranfood} alt='Food Image' />
+				md:w-1/5 md:max-h-[85%%] md:max-w-[300px] md:absolute md:top-[20px] md:right-20 shadow-xl' src={restauranfood} alt='Food Image' />
 			</main>
 		</>
 	);

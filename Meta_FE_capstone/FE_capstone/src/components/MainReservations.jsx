@@ -20,15 +20,13 @@ const MainReservations = () => {
 	const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
 	return (
-		<div className='main-res-container'>
-			<div className='main-res-title'>
-				<h1 className='main-res-title-title'>Find a table for any occasion</h1>
+		<div className='flex flex-col justify-center items-center p-4 gap-2 md:gap-6 text-center md:mt-6'>
+			<h1 className='font-karla text-black text-4xl'>Find a table for any occasion</h1>
+			<div className='flex flex-col justify-center items-center gap-4 md:flex-row md:flex-wrap md:gap-12'>
+				<img className='shadow-xl rounded-xl' src='https://placehold.co/440x308' alt='main-res-image-1' />
+				<img className='shadow-xl rounded-xl' src='https://placehold.co/440x308' alt='main-res-image-2' />
+				<BookingForm availableTimes={availableTimes} dispatch={dispatch} />
 			</div>
-			<div className='main-res-images'>
-				<img className='main-res-image-1' src='https://placehold.co/440x308' alt='main-res-image-1' />
-				<img className='main-res-image-2' src='https://placehold.co/440x308' alt='main-res-image-2' />
-			</div>
-			<BookingForm availableTimes={availableTimes} dispatch={dispatch} />
 		</div>
 	);
 };
